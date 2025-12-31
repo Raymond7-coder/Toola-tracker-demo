@@ -22,7 +22,7 @@ const LoginForm : React.FC = () => {
         <form action="" className="flex flex-col gap-y-4 w-full">
             <div className="flex flex-col">
                 <label htmlFor="email" className="text-xs xsm:text-13 font-medium">Email Address:</label>
-                <input type="email" name="" id="" placeholder="abc@aosorwell.com" className="text-13 border border-gray-200 rounded-sm mt-1 px-2 py-1 ouline-none" required autoComplete="email"/>
+                <input type="email" name="email" id="email" placeholder="abc@SAM.com" className="text-13 border border-gray-200 rounded-sm mt-1 px-2 py-1 ouline-none" required autoComplete="email"/>
             </div>
             <div className="flex flex-col">
                 <label htmlFor="password" className="text-xs xsm:text-13 font-medium">Password:</label>
