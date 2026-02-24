@@ -42,7 +42,7 @@ export default function EditToolPage({ params }: { params: { id: string } }) {
         purchaseDate: "",
         yearOfManufacture: "",
         notes: "",
-        ownership: "AOS",
+        ownership: "SAM",
         status: "",
         condition: "",
         location: "",
@@ -62,13 +62,13 @@ export default function EditToolPage({ params }: { params: { id: string } }) {
                 type: "Drill",
                 department: "Construction",
                 serialNumber: "HD-9928-XA",
-                assetId: "AOS-1001", // This matches the ID passed in
+                assetId: "SAM-1001", // This matches the ID passed in
                 manufacturer: "DeWalt",
                 model: "DCD996",
                 purchaseDate: "2023-01-15",
                 yearOfManufacture: "2022",
                 notes: "Heavy duty, includes spare battery.",
-                ownership: "AOS",
+                ownership: "SAM",
                 status: "In Field",
                 condition: "Good",
                 location: "Site B - Downtown",
@@ -97,7 +97,7 @@ export default function EditToolPage({ params }: { params: { id: string } }) {
             {
                 deleteModal  &&
                 <DeleteTool
-                    name={"Hammer Drill 18V - AOS-1001"}
+                    name={"Hammer Drill 18V - SAM-1001"}
                     open={deleteModal}
                     onClose={() => setDeleteModal(false)}
                 />
