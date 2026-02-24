@@ -36,7 +36,7 @@ interface MaintenanceLog {
 const toolDetails = {
   // A. TOOL INFORMATION
     name: "Hammer Drill 18V XR",
-    assetId: "AOS-1001",
+    assetId: "SAM-1001",
     serialNumber: "HD-9928-XA-2022",
     category: "Power Tools",
     type: "Drill",
@@ -46,7 +46,7 @@ const toolDetails = {
     purchaseDate: "15 Jan 2023",
     yearOfManufacture: "2022",
     description: "Brushless 3-speed hammer drill. Heavy duty use.",
-    ownership: "AOS Owned",
+    ownership: "SAM Owned",
     
     // B. STATUS & CONDITION
     status: "In Use",
@@ -119,7 +119,7 @@ export default function ToolDetailPage() {
                 <div>
                     <div className="flex items-center gap-2 mb-1">
                         <span className="text-10 sm:text-11 2xl:text-xs font-bold text-gray-500 uppercase tracking-wider">Power Tools / Drills</span>
-                        <span className="px-2 py-0.5 rounded text-10 font-semibold bg-gray-200 text-gray-700">AOS Owned</span>
+                        <span className="px-2 py-0.5 rounded text-10 font-semibold bg-gray-200 text-gray-700">SAM Owned</span>
                     </div>
                     <h1 className="text-xl md:text-2xl 2xl:text-3xl font-bold text-gray-900">{toolDetails.name}</h1>
                     <div className="flex items-center gap-4 mt-2 text-xs md:text-13 2xl:text-sm text-gray-600">
