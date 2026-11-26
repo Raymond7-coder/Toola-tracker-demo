@@ -1,33 +1,66 @@
 
-import Sidebar from "@/_components/ui/Sidebar";
-import SplashScreen from "@/_components/ui/SplashScreen";
+import type { Metadata } from "next";
+import {
+    Geist,
+    Geist_Mono,
+    Lato,
+    Montserrat,
+    Poppins
+} from "next/font/google";
 
-export default function DashboardLayout({
+import "./globals.css";
+
+const geistSans = Geist({
+    variable: "--font-geist-sans",
+    subsets: ["latin"],
+});
+
+const geistMono = Geist_Mono({
+    variable: "--font-geist-mono",
+    subsets: ["latin"],
+});
+
+const montserrat = Montserrat({
+    variable: "--font-montserrat",
+    subsets: ["latin"],
+    weight: [
+        "100", "200", "300", "400", "500",
+        "600", "700", "800", "900"
+    ],
+});
+
+const poppins = Poppins({
+    variable: "--font-poppins",
+    subsets: ["latin"],
+    weight: [
+        "100", "200", "300", "400", "500",
+        "600", "700", "800", "900"
+    ],
+});
+
+const lato = Lato({
+    variable: "--font-lato",
+    weight: ["100", "300", "400", "700", "900"],
+});
+
+export const metadata: Metadata = {
+    title: "Toola Tracker | Tool, Asset & Equipment Management",
+    description:
+        "A digital tool, asset and equipment lifecycle management solution designed to improve operational efficiency, traceability and accountability.",
+};
+
+export default function RootLayout({
     children,
 }: Readonly<{
     children: React.ReactNode;
 }>) {
     return (
-        <>
-            <SplashScreen />
-
-            <Sidebar />
-
-            <main
-                className="
-                    bg-gray-50
-                    min-h-screen
-                    min-w-0
-                    font-sans
-                    px-4
-                    pt-20
-                    pb-24
-                    sm:ml-50
-                    sm:p-5
-                "
+        <html lang="en">
+            <body
+                className={`${geistSans.variable} ${geistMono.variable} ${lato.variable} ${montserrat.variable} ${poppins.variable} antialiased`}
             >
                 {children}
-            </main>
-        </>
+            </body>
+        </html>
     );
 }
