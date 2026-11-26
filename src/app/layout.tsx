@@ -30,8 +30,8 @@ const lato = Lato({
 });
 
 export const metadata: Metadata = {
-  title: "ATLAS",
-  description: "AOS Tool Tracking System",
+  title: "TOOLA",
+  description: "A digital tool, asset and equipment lifecycle management solution designed to improve operational efficiency, traceability and accountability.",
 };
 
 export default function RootLayout({
