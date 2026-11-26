@@ -114,60 +114,70 @@ const Sidebar : React.FC = () => {
                 </div>
             </div>
 
-            {/* MOBILE NAV */}
-            <div className="bg-white fixed bottom-0 gap-x-1 px-3 py-1.5 flex justify-between items-center w-full sm:hidden drop-shadow-2xl font-montserrat z-40">
-                <Link 
-                    href={"/dashboard"}
-                    className={`flex flex-col gap-x-1 items-center text-13 2xl:text-sm font-semibold ${
-                        pathname === "/dashboard" ?
-                        " text-green-700  " :
-                        "text-gray-600"
-                    } `}
-                >
-                    <MdDashboard className="text-base"/> <span className="text-[9px]">Dashboard</span>
-                </Link>
-                <Link 
-                    href={"/dashboard/inventory"}
-                    className={`flex flex-col gap-x-1 items-center text-13 2xl:text-sm font-semibold ${
-                        pathname === "/inventory" ?
-                        " text-green-700  " :
-                        "text-gray-600"
-                    } `}
-                >
-                    <MdInventory className="text-base"/> <span className="text-[9px]">Tools</span>
-                </Link>
-                <Link 
-                    href={"/dashboard/notifications"}
-                    className={`flex flex-col gap-x-1 items-center text-13 2xl:text-sm font-semibold ${
-                        pathname === "/dashboard/notifications" ?
-                        " text-green-700  " :
-                        "text-gray-600"
-                    } `}
-                >
-                    <MdOutlineAutoGraph className="text-base"/> <span className="text-[9px]">Analytics</span>
-                </Link>
-                <Link 
-                    href={"/dasboard/audit"}
-                    className={`flex flex-col gap-x-1 items-center text-13 2xl:text-sm font-semibold ${
-                        pathname === "/audit" ?
-                        " text-green-700  " :
-                        "text-gray-600"
-                    } `}
-                >
-                    <HiOutlineDocumentSearch className="text-base"/> <span className="text-[9px]">Audit</span>
-                </Link>
-                <Link 
-                    href={"/dashboard/settings"}
-                    className={`flex flex-col gap-x-1 items-center text-13 2xl:text-sm font-semibold ${
-                        pathname === "/settings" ?
-                        " text-green-700  " :
-                        "text-gray-600"
-                    } `}
-                >
-                    <MdOutlineSettings className="text-base"/> <span className="text-[9px]">Settings</span>
-                </Link>
 
-            </div>
+{/* MOBILE NAV */}
+<div className="bg-white fixed bottom-0 gap-x-1 px-3 py-1.5 flex justify-between items-center w-full sm:hidden drop-shadow-2xl font-montserrat z-40">
+    <Link
+        href={"/dashboard"}
+        className={`flex flex-col gap-x-1 items-center text-13 2xl:text-sm font-semibold ${
+            pathname === "/dashboard"
+                ? "text-green-700"
+                : "text-gray-600"
+        }`}
+    >
+        <MdDashboard className="text-base"/>
+        <span className="text-[9px]">Dashboard</span>
+    </Link>
+
+    <Link
+        href={"/dashboard/tools"}
+        className={`flex flex-col gap-x-1 items-center text-13 2xl:text-sm font-semibold ${
+            pathname.startsWith("/dashboard/tools")
+                ? "text-green-700"
+                : "text-gray-600"
+        }`}
+    >
+        <MdInventory className="text-base"/>
+        <span className="text-[9px]">Tools</span>
+    </Link>
+
+    <Link
+        href={"/dashboard/analytics"}
+        className={`flex flex-col gap-x-1 items-center text-13 2xl:text-sm font-semibold ${
+            pathname.startsWith("/dashboard/analytics")
+                ? "text-green-700"
+                : "text-gray-600"
+        }`}
+    >
+        <MdOutlineAutoGraph className="text-base"/>
+        <span className="text-[9px]">Analytics</span>
+    </Link>
+
+    <Link
+        href={"/dashboard/audit"}
+        className={`flex flex-col gap-x-1 items-center text-13 2xl:text-sm font-semibold ${
+            pathname === "/dashboard/audit"
+                ? "text-green-700"
+                : "text-gray-600"
+        }`}
+    >
+        <HiOutlineDocumentSearch className="text-base"/>
+        <span className="text-[9px]">Audit</span>
+    </Link>
+
+    <Link
+        href={"/dashboard/settings"}
+        className={`flex flex-col gap-x-1 items-center text-13 2xl:text-sm font-semibold ${
+            pathname === "/dashboard/settings"
+                ? "text-green-700"
+                : "text-gray-600"
+        }`}
+    >
+        <MdOutlineSettings className="text-base"/>
+        <span className="text-[9px]">Settings</span>
+    </Link>
+</div>
+
         </>
     );
 }
