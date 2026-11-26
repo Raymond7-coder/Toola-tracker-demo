@@ -263,7 +263,7 @@ export default function SystemAuditPage() {
     };
 
     return (
-        <div className="min-h-screen min-w-0 bg-gray-50/50 font-sans max-sm:pt-12 pb-24 sm:pb-6">
+        <div className="min-w-0 bg-gray-50/50 font-sans">
 
             {/* PAGE HEADER */}
 
