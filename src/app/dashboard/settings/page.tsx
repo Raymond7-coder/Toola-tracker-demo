@@ -613,6 +613,7 @@ export default function AdminSettingsPage() {
 
                                             <GenericManagementTable
                                                 type={activeTab}
+                                                search={search}
                                             />
 
                                         </div>
