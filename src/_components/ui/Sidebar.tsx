@@ -98,7 +98,7 @@ const Sidebar : React.FC = () => {
             </div>
 
             {/* MOBILE NAV TOP NAV */}
-            <div  className="bg-white absolute top-0 gap-x-1 px-3 py-2 flex justify-between items-center w-full sm:hidden drop-shadow-sm font-montserrat">
+            <div  className="bg-white fixed top-0 left-0 right-0 z-40 gap-x-1 px-4 py-3 flex justify-between items-center w-full sm:hidden drop-shadow-sm font-montserrat">
                 <Image
                     src={logo}
                     alt="Logo"
